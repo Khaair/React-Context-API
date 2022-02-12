@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { DadaProvider } from './Component/Mycontext';
+import Nati from './Component/Nati';
+import Son from './Component/Son';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+  return(
+    <>
+
+    <DadaProvider value={"Dada send a messageeee"}>
+    <Son/>
+
+    <Nati/>
+    </DadaProvider>
+       
+    </>
+  )
+
+
+    
+     
+  
+  
 }
 
 export default App;
